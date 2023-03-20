@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rellax Parallax Effect Example</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .background {
+      background-color: #2e7da3;
+      z-index: 1;
+    }
+
+    .foreground {
+      background-color: #00adb5;
+      z-index: 2;
+    }
+
+    h1 {
+      font-family: Arial, sans-serif;
+      font-size: 48px;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div class="section background">
+    <h1 class="rellax" data-rellax-speed="-2">Background</h1>
+  </div>
+  <div class="section foreground">
+    <h1 class="rellax" data-rellax-speed="2">Foreground</h1>
+  </div>
+  <div class="section foreground">
+    <h1 class="rellax" data-rellax-speed="2">Foreground</h1>
+  </div>
+  <div class="section foreground">
+    <h1 class="rellax" data-rellax-speed="2">Foreground</h1>
+  </div>
+  <div class="section foreground">
+    <h1 class="rellax" data-rellax-speed="2">Foreground</h1>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var rellax = new Rellax('.rellax');
+    });
+  </script>
+</body>
+</html>
